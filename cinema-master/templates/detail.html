@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title id="page-title"></title>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo">flakes</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active"><a style="color: #fff;" href="index.html">Home</a></li>
+                    <li class="menu-list-item">Movies</li>
+                    <li class="menu-list-item">Series</li>
+                    <li class="menu-list-item">Popular</li>
+                    <li class="menu-list-item">Trends</li>
+                </ul>
+            </div>
+            <div class="profile-container">
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                    </svg>
+                </i>
+                <div class="profile-text-container" onclick="openProfile();" style="cursor:pointer;">
+                    <span class="profile-text" id="user-name"></span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+
+                <div class="profile_open_block">
+                    <a href="#" style="border-radius: 5px 5px 0 0">Profile</a>
+                    <a onclick="logoutAccount();" style="border-radius: 0 0 5px 5px">Logout</a>
+                </div>
+
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="sidebar">
+            <i class="left-menu-icon fas fa-search"></i>
+            <i class="left-menu-icon fas fa-home"></i>
+            <i class="left-menu-icon fas fa-users"></i>
+            <i class="left-menu-icon fas fa-bookmark"></i>
+            <i class="left-menu-icon fas fa-tv"></i>
+            <i class="left-menu-icon fas fa-hourglass-start"></i>
+            <i class="left-menu-icon fas fa-shopping-cart"></i>
+        </div>
+    </header>
+
+    <section>
+        <div class="section_container">
+            <div class="wrapper">
+                <div class="background_image_block_section_container"></div>
+            </div>
+            <div class="section_container_title">
+                <h1 class="movie-data-title"></h1>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="movie_main_container">
+            <div class="movie_main_information_block">
+                <div class="image_block_movie_main movie-data-image"></div>
+                <div class="title_block_movie_main">
+                    <h1 class="movie-data-title">Movie</h1>
+                    <div class="container_rating">
+                        <div class="current_rating">
+                            
+                        </div>
+                        <div class="rate_the_film_block_container">
+                            <div class="set_rating_for_movie">
+                                <button class="rate_the_film" onclick="rateTheMovie();">Rate the film</button>
+                            </div>
+                            <div class="set_rating_for_movie_block">
+                                <div class="close_rating_block_movie">
+                                    <i class="fas fa-times" onclick="closeRatingBlock();"></i>
+                                </div>
+                                <div class="rating_for_movie" onmouseleave="resetRating();">
+                                    <i onclick="rateMovie(1);" onmouseover="setRating(1);" class="fas fa-star"></i>
+                                    <i onclick="rateMovie(2);" onmouseover="setRating(2);" class="fas fa-star"></i>
+                                    <i onclick="rateMovie(3);" onmouseover="setRating(3);" class="fas fa-star"></i>
+                                    <i onclick="rateMovie(4);" onmouseover="setRating(4);" class="fas fa-star"></i>
+                                    <i onclick="rateMovie(5);" onmouseover="setRating(5);" class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="movie-data-description">Movie</p>
+        </div>
+    </section>
+
+    <script src="../static/js/script.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/detail.js"></script>
+</body>
+</html>
